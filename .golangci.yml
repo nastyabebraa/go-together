@@ -1,0 +1,57 @@
+run:
+  allow-parallel-runners: true
+issues:
+  exclude-rules:
+    - path: controller
+      linters:
+        - wrapcheck
+    - path: transaction
+      linters:
+        - wrapcheck
+linters:
+  enable-all: true
+  disable:
+    - errcheck
+    - goimports
+    - wsl
+    - exhaustivestruct
+    - varnamelen
+    - exhaustruct
+    - golint
+    - contextcheck
+    - gci
+    - gofumpt
+    - nolintlint
+    - nlreturn
+    - godot
+    - ifshort
+    - godox
+    - maligned
+    - nosnakecase
+    - depguard
+    - dupword
+    - tagalign
+    - musttag
+    - gomnd
+    - mnd
+    - tagliatelle
+    - err113
+    - errorlint
+linters-settings:
+  funlen:
+    lines: 80
+  lll:
+    line-length: 150
+  cyclop:
+    max-complexity: 15
+  revive:
+    rules:
+      - name: var-naming
+        disabled: true
+  stylecheck:
+    checks:
+      - "-ST1000"
+      - "-ST1016"
+      - "-ST1020"
+      - "-ST1021"
+      - "-ST1022"
